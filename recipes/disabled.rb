@@ -18,6 +18,9 @@
 # limitations under the License.
 #
 
+
+include_recipe "selinux-monkeys::default"
+
 execute "disable selinux enforcement" do
   only_if "selinuxenabled"
   command "setenforce 0"
